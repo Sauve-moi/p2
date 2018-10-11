@@ -64,7 +64,7 @@ class HousesController < ApplicationController
   # POST /houses.json
   def create
     @house = House.new(house_params)
-#    @house.contact_information_for_listing_realtor = current_user.id
+    @house.contact_information_for_listing_realtor = current_user.id.to_s
 
     respond_to do |format|
       if @house.save
