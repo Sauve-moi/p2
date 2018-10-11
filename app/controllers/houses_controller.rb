@@ -1,6 +1,6 @@
 class HousesController < ApplicationController
   before_action :authenticate!
-  before_action :judge_realtor, except: [:index, :show]
+  before_action :judge_realtor, except: [:index, :show, :addinterest]
   before_action :set_house, only: [:show, :edit, :update, :destroy]
   before_action
   # GET /houses
