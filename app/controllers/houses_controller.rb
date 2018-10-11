@@ -52,7 +52,7 @@ class HousesController < ApplicationController
   # GET /houses/1/edit
   def edit
     #@house = House.find(params[:id])
-    if current_user.id != @house.contact_information_for_listing_realtor
+    if current_user.id.to_s != @house.contact_information_for_listing_realtor
       respond_to do |format|
         format.html { redirect_to houses_url, notice: 'No access to edit this house!' }
       end
@@ -64,7 +64,7 @@ class HousesController < ApplicationController
   # POST /houses.json
   def create
     @house = House.new(house_params)
-    @house.contact_information_for_listing_realtor = current_user.id
+#    @house.contact_information_for_listing_realtor = current_user.id
 
     respond_to do |format|
       if @house.save
