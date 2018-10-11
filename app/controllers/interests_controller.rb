@@ -71,6 +71,6 @@ class InterestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def interest_params
-      params.fetch(:interest, {})
+      pparams.require(:interest).permit(:buyer_id,:house_id)
     end
 end
