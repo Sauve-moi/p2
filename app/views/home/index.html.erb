@@ -23,9 +23,9 @@
 <p style="text-align:center;color:red;font-size:30px;">
   <%= link_to 'View Companies',real_estate_companies_path %>
   <%= link_to 'View Houses',houses_path %>
-  <%= link_to 'New Interest',new_interest_path %>
   <%= link_to 'New Inquiry',new_inquiry_path%>
   <%= link_to 'View Inquiries','/users/showinquiry/'+current_user.id.to_s %>
+  <%= link_to 'View Interests','/users/showinterest/'+current_user.id.to_s %>
 </p>
   <%elsif current_user.role=="realtor" %>
       <br>

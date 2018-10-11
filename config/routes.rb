@@ -26,5 +26,6 @@ Rails.application.routes.draw do
   post '/houses/:house_id', to: 'houses#reply'
   #get '/users/inquiries/:userid', to: 'inquires#hshow'
   get '/users/showinquiry/:id', to: 'users#showinquiry'
-  post '/houses/addinterest/:id',to: 'houses#addinterest'
+  get '/users/showinterest/:id', to: 'users#showinterest'
+  get '/houses/addinterest/:id',to: 'houses#addinterest'
 end

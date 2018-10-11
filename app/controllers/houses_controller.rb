@@ -146,6 +146,7 @@ class HousesController < ApplicationController
   end
   def addinterest
     @interest=Interest.new(buyer_id: current_user.id, house_id: params[:id])
+    @interest.save
   end
   private
   # Use callbacks to share common setup or constraints between actions.

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_admin!, except: [:set_user, :show, :showinquiry]
+  before_action :authenticate_admin!, except: [:set_user, :show, :showinquiry,:showinterest]
   # before_action :authenticate_user!
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
@@ -73,6 +73,9 @@ class UsersController < ApplicationController
 def showinquiry
   @inquiries=Inquiry.where(userid: params[:id])
 end
+  def showinterest
+    @interests=Interest.where(buyer_id: params[:id])
+  end
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_user
