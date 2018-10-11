@@ -15,6 +15,10 @@ class InquiriesController < ApplicationController
   # GET /inquiries/new
   def new
     @inquiry = Inquiry.new
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render :json => @user }
+    end
   end
 
   # GET /inquiries/1/edit
