@@ -32,12 +32,12 @@
         <td><%= house.contact_information_for_listing_realtor %></td>
         <td><%= link_to 'Show', house %></td>
         <%if current_user.role !="househunter" %>
-          <% if current_admin or (current_user.role=="realtor" and house.contact_information_for_listing_realtor == current_user.id) %>
         <td><%= link_to 'Edit', edit_house_path(house) %></td>
         <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-        <% end %>
+          <% else %>
+        <td><%=link_to 'Add to My Interest','/houses/interest/'+house.id.to_s %></td>
           </tr>
+   <% end %>
   <% end %>
     <% end %>
   </tbody>
