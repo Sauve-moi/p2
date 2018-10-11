@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce566f97-fd0f-48aa-8ad0-c3ccde71faa5" name="Default Changelist" comment="more more more more bug fixed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/interests_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/interests_controller.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -94,7 +95,7 @@
           <entry key="gitignore" value="1" />
           <entry key="jbuilder" value="1" />
           <entry key="md" value="1" />
-          <entry key="rb" value="9" />
+          <entry key="rb" value="10" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
@@ -103,7 +104,7 @@
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="RHTML" value="6" />
-          <entry key="Ruby" value="11" />
+          <entry key="Ruby" value="12" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
@@ -112,7 +113,7 @@
           <entry key="Gemfile" value="1" />
           <entry key="erb" value="213" />
           <entry key="md" value="12" />
-          <entry key="rb" value="198" />
+          <entry key="rb" value="203" />
           <entry key="yml" value="4" />
         </counts>
       </usages-collector>
@@ -120,7 +121,7 @@
         <counts>
           <entry key="Markdown" value="12" />
           <entry key="RHTML" value="213" />
-          <entry key="Ruby" value="199" />
+          <entry key="Ruby" value="204" />
           <entry key="YAML" value="4" />
         </counts>
       </usages-collector>
@@ -134,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/inquiries_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="74" column="56" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="56" />
+            <state relative-caret-position="159">
+              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -159,19 +160,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/houses/addinterest.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="32" lean-forward="true" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+            <state relative-caret-position="249">
+              <caret line="23" column="7" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="23" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -179,9 +171,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/interests_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
+            <state relative-caret-position="368">
+              <caret line="77" column="7" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/schema.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-381" />
           </provider>
         </entry>
       </file>
@@ -273,11 +272,11 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/app/controllers/inquiries_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/houses/addinterest.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/houses_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/houses/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/inquiries_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/interests_controller.rb" />
       </list>
     </option>
@@ -507,7 +506,7 @@
       <workItem from="1539205328559" duration="10869000" />
       <workItem from="1539217152133" duration="3350000" />
       <workItem from="1539225177173" duration="3945000" />
-      <workItem from="1539269750035" duration="2289000" />
+      <workItem from="1539269750035" duration="2712000" />
     </task>
     <task id="LOCAL-00001" summary="bug fixed">
       <created>1539212232252</created>
@@ -548,7 +547,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41291000" />
+    <option name="totallyTimeSpent" value="41714000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -560,7 +559,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="118" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="49" y="23" width="1440" height="877" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29470673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -697,11 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1186" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/houses/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-916">
@@ -822,13 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/houses/addinterest.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -867,6 +854,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/interests/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -876,15 +870,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/inquiries_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="74" column="56" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="56" />
+        <state relative-caret-position="159">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-381" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/interests_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
+        <state relative-caret-position="368">
+          <caret line="77" column="7" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
         </state>
       </provider>
     </entry>
