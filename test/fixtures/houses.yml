@@ -4,8 +4,19 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+
+
+one:
+  id: 2
+  location: MyString
+  square_footage: MyString
+  year_built: 1
+  style: MyString
+  list_price: 1
+  floors: 1
+  basement: MyString
+  current_house_owner: MyString
+  contact_information_for_listing_realtor: 99
+
+
+
