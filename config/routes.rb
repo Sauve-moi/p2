@@ -23,9 +23,7 @@ Rails.application.routes.draw do
   get '/houses/potential_buyers/:house_id', to: 'potential_buyers#potential_buyers'
   get "/adminmanage" => "home#adminindex"
   get "/admin/users" => "users#index"
-  post '/houses/:house_id', to: 'houses#reply'
+  post '/houses/:id', to: 'houses#reply'
   #get '/users/inquiries/:userid', to: 'inquires#hshow'
-  get '/users/showinquiry/:id', to: 'users#showinquiry'
-  get '/users/showinterest/:id', to: 'users#showinterest'
-  get '/houses/addinterest/:id',to: 'houses#addinterest'
+  get '/users/showinquiry/:house_id', to: 'users#showinquiry'
 end

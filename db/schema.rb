@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_11_155905) do
+ActiveRecord::Schema.define(version: 2018_10_12_034730) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2018_10_11_155905) do
     t.integer "floors"
     t.string "basement", limit: 3
     t.string "current_house_owner"
-    t.string "contact_information_for_listing_realtor"
+    t.integer "contact_information_for_listing_realtor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2018_10_11_155905) do
     t.string "msg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "reply"
   end
 
   create_table "interests", force: :cascade do |t|

@@ -5,7 +5,7 @@ class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
   def index
-    @pictures = Picture.where(id: params[:format])
+    @pictures = Picture.where(house_id: params[:format])
     @house = House.find_by(id: params[:format])
   end
 

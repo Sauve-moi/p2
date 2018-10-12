@@ -31,21 +31,17 @@
         <td><%= house.current_house_owner %></td>
         <td><%= house.contact_information_for_listing_realtor %></td>
         <td><%= link_to 'Show', house %></td>
-        <%if current_admin or current_user.role !="househunter" %>
         <td><%= link_to 'Edit', edit_house_path(house) %></td>
         <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% else %>
-        <td><%=link_to 'Add to My Interest','/houses/addinterest/'+house.id.to_s%></td>
+
           </tr>
-   <% end %>
   <% end %>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<%if current_admin or current_user.role !="househunter" %>
+
 <%= link_to 'New House', new_house_path %>
-  <% end %>
 <br>
 <%= link_to "Back", :back %>

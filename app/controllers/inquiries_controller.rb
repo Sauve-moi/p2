@@ -15,10 +15,6 @@ class InquiriesController < ApplicationController
   # GET /inquiries/new
   def new
     @inquiry = Inquiry.new
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render :json => @user }
-    end
   end
 
   # GET /inquiries/1/edit
@@ -71,7 +67,7 @@ class InquiriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_inquiry
-      @inquiry = Inquiry.find(params[:id])
+      @inquiry = Inquiry.find(params[:house_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

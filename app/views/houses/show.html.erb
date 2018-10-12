@@ -2,7 +2,7 @@
 
 <h2> House Details </h2>
 
-<% if @picture != nil %>
+<% if @picture!= nil %>
     <p>
       <b>Picture:</b><br>
       <img src=" <%= @picture.picture_url %>" style="height: 200px; width: 200px">
@@ -74,7 +74,7 @@
       <%else  %>
         <%= form_with(model: inquiry, url: '/houses/reply', html:{method: :post}) do |form| %>
           <%= hidden_field_tag('inquiry[id]', inquiry.id) %>
-          <%= hidden_field_tag('inquiry[house_id]', @house.house_id) %>
+          <%= hidden_field_tag('inquiry[house_id]', @house.id) %>
 
         <div class="field">
           <%= form.label :reply %>

@@ -22,7 +22,7 @@ class PotentialBuyersController < ApplicationController
 
   private
   def set_house
-    @house = House.find_by(house_id: params[:house_id].to_i)
+    @house = House.find_by(id: params[:house_id].to_i)
   end
 
 end

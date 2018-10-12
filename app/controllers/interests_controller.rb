@@ -15,10 +15,6 @@ class InterestsController < ApplicationController
   # GET /interests/new
   def new
     @interest = Interest.new
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render :json => @user }
-    end
   end
 
   # GET /interests/1/edit
@@ -75,6 +71,6 @@ class InterestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def interest_params
-      params.require(:interest).permit(:buyer_id,:house_id)
+      params.fetch(:interest, {})
     end
 end

@@ -1,8 +1,8 @@
 class HousesController < ApplicationController
-  before_action :authenticate!
-  before_action :judge_realtor, except: [:index, :show, :addinterest]
+  before_action :authenticate_user!
+  before_action :judge_realtor, except: [:index, :show]
   before_action :set_house, only: [:show, :edit, :update, :destroy]
-  before_action
+
   # GET /houses
   # GET /houses.json
 
@@ -23,7 +23,7 @@ class HousesController < ApplicationController
   # GET /houses/1
   # GET /houses/1.json
   def show
-    @picture = Picture.find_by(id: @house.id)
+    @picture = Picture.find_by(house_id: @house.id)
     @inquiries = Inquiry.where(houseid: @house.id)
     @user_ids = @inquiries.select('userid')
     userids = Array.new(@user_ids.length)
@@ -33,7 +33,7 @@ class HousesController < ApplicationController
     end
 
     @users = User.find(userids)
-    @house.contact_information_for_listing_realtor = User.find_by(id: @house.contact_information_for_listing_realtor).email
+    @house.contact_information_for_listing_realtor = User.find_by(id: @house.contact_information_for_listing_realtor).phone
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @house }
@@ -52,7 +52,7 @@ class HousesController < ApplicationController
   # GET /houses/1/edit
   def edit
     #@house = House.find(params[:id])
-    if current_user.id.to_s != @house.contact_information_for_listing_realtor
+    if current_user.id != @house.contact_information_for_listing_realtor
       respond_to do |format|
         format.html { redirect_to houses_url, notice: 'No access to edit this house!' }
       end
@@ -144,10 +144,7 @@ class HousesController < ApplicationController
       end
     end
   end
-  def addinterest
-    @interest=Interest.new(buyer_id: current_user.id, house_id: params[:id])
-    @interest.save
-  end
+
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_house
@@ -172,18 +169,21 @@ class HousesController < ApplicationController
     end
   end
 
-  def authenticate!
-    # :authenticate_admin! || :authenticate_user!
-    # @current_user = admin_signed_in? ? current_admin : current_user
 
-    if user_signed_in?
-      puts 'aaa'
-      authenticate_user!
-    elsif admin_signed_in?
-      puts 'bbb'
-      authenticate_admin!
-    else
-      authenticate_user!
-    end
-  end
+  # def authenticate!
+  #   # :authenticate_admin! || :authenticate_user!
+  #   # @current_user = admin_signed_in? ? current_admin : current_user
+  #
+  #   if user_signed_in?
+  #     puts 'aaa'
+  #     authenticate_user!
+  #   elsif admin_signed_in?
+  #     puts 'bbb'
+  #     authenticate_admin!
+  #   else
+  #     authenticate_user!
+  #   end
+  # end
+
+
 end

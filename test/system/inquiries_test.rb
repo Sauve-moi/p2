@@ -14,6 +14,10 @@ class InquiriesTest < ApplicationSystemTestCase
     visit inquiries_url
     click_on "New Inquiry"
 
+    fill_in "Houseid", with: @inquiry.houseid
+    fill_in "Msg", with: @inquiry.msg
+    fill_in "Subject", with: @inquiry.subject
+    fill_in "Userid", with: @inquiry.userid
     click_on "Create Inquiry"
 
     assert_text "Inquiry was successfully created"
@@ -24,6 +28,10 @@ class InquiriesTest < ApplicationSystemTestCase
     visit inquiries_url
     click_on "Edit", match: :first
 
+    fill_in "Houseid", with: @inquiry.houseid
+    fill_in "Msg", with: @inquiry.msg
+    fill_in "Subject", with: @inquiry.subject
+    fill_in "Userid", with: @inquiry.userid
     click_on "Update Inquiry"
 
     assert_text "Inquiry was successfully updated"
